@@ -1,0 +1,9 @@
+{
+  "name": "PolloERP - Sistema Integral",
+  "description": "Sistema ERP contable y de inventarios para procesamiento y venta de pollo, con módulos de desposte, compras, ventas y reportes financieros.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": []
+}
