@@ -357,6 +357,11 @@ async function startServer() {
     res.json(employee);
   });
 
+  app.get('/api/debug/users', async (req, res) => {
+    const users = await prisma.user.findMany({ select: { email: true, role: true, name: true } });
+    res.json(users);
+  });
+
   // --- VITE MIDDLEWARE ---
   const isProd = process.env.NODE_ENV === 'production';
   console.log(`Running in ${isProd ? 'PRODUCTION' : 'DEVELOPMENT'} mode`);
